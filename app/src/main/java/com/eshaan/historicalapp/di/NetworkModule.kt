@@ -1,5 +1,6 @@
-package com.eshaan.historicalapp
+package com.eshaan.historicalapp.di
 
+import com.eshaan.historicalapp.data.model.ApiService
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

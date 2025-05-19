@@ -13,7 +13,7 @@
         android:theme="@style/Theme.HistoricalApp">
 
         <activity
-            android:name=".LoginActivity"
+            android:name=".ui.login.LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,11 +22,11 @@
         </activity>
 
         <activity
-            android:name=".DashboardActivity"
+            android:name=".ui.dashboard.DashboardActivity"
             android:exported="false" />
 
         <activity
-            android:name=".DetailsActivity"
+            android:name=".ui.dashboard.DetailsActivity"
             android:exported="false" />
 
     </application>

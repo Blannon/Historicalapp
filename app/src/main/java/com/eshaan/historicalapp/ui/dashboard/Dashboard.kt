@@ -1,4 +1,4 @@
-package com.eshaan.historicalapp
+package com.eshaan.historicalapp.ui.dashboard
 
 import android.content.Intent
 import android.os.Bundle
@@ -20,14 +20,13 @@ class DashboardActivity : AppCompatActivity() {
     private lateinit var binding: ActivityDashboardBinding
     private val viewModel: DashboardViewModel by viewModels()
     private val eventAdapter = EventAdapter { historicalEvent ->
-        // Navigate to details screen
         val intent = Intent(this, DetailsActivity::class.java).apply {
-            putExtra(DetailsActivity.EXTRA_EVENT, historicalEvent.event)
-            putExtra(DetailsActivity.EXTRA_START_YEAR, historicalEvent.startYear)
-            putExtra(DetailsActivity.EXTRA_END_YEAR, historicalEvent.endYear)
-            putExtra(DetailsActivity.EXTRA_LOCATION, historicalEvent.location)
-            putExtra(DetailsActivity.EXTRA_KEY_FIGURE, historicalEvent.keyFigure)
-            putExtra(DetailsActivity.EXTRA_DESCRIPTION, historicalEvent.description)
+            putExtra(DetailsActivity.Companion.EXTRA_EVENT, historicalEvent.event)
+            putExtra(DetailsActivity.Companion.EXTRA_START_YEAR, historicalEvent.startYear)
+            putExtra(DetailsActivity.Companion.EXTRA_END_YEAR, historicalEvent.endYear)
+            putExtra(DetailsActivity.Companion.EXTRA_LOCATION, historicalEvent.location)
+            putExtra(DetailsActivity.Companion.EXTRA_KEY_FIGURE, historicalEvent.keyFigure)
+            putExtra(DetailsActivity.Companion.EXTRA_DESCRIPTION, historicalEvent.description)
         }
         startActivity(intent)
     }
@@ -40,7 +39,6 @@ class DashboardActivity : AppCompatActivity() {
         setupRecyclerView()
         observeViewModel()
 
-        // Get keypass from intent
         val keypass = intent.getStringExtra(EXTRA_KEYPASS) ?: ""
         if (keypass.isNotEmpty()) {
             viewModel.loadDashboard(keypass)

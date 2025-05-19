@@ -1,5 +1,6 @@
-package com.eshaan.historicalapp
+package com.eshaan.historicalapp.data.repository
 
+import com.eshaan.historicalapp.data.model.ApiService
 import com.eshaan.historicalapp.data.model.HistoricalEvent
 import com.eshaan.historicalapp.data.model.LoginRequest
 import kotlinx.coroutines.Dispatchers

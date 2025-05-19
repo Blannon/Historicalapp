@@ -1,4 +1,4 @@
-package com.eshaan.historicalapp
+package com.eshaan.historicalapp.ui.dashboard
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -7,7 +7,6 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.eshaan.historicalapp.data.model.HistoricalEvent
 import com.eshaan.historicalapp.databinding.ItemHistoricalEventBinding
-
 
 class EventAdapter(private val onItemClick: (HistoricalEvent) -> Unit) :
     ListAdapter<HistoricalEvent, EventAdapter.EventViewHolder>(EventDiffCallback()) {

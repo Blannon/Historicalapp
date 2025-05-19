@@ -40,9 +40,6 @@ android {
     buildFeatures {
         viewBinding = true
     }
-//    kapt {
-//        correctErrorTypes = true
-//    }
 }
 
 dependencies {
@@ -54,40 +51,40 @@ dependencies {
     implementation(libs.androidx.constraintlayout)
 
     // ViewModel and LiveData
-    implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:2.9.0")
-    implementation ("androidx.lifecycle:lifecycle-livedata-ktx:2.9.0")
-    implementation ("androidx.activity:activity-ktx:1.10.1")
-    implementation ("androidx.fragment:fragment-ktx:1.8.6")
+    implementation (libs.androidx.lifecycle.viewmodel.ktx)
+    implementation (libs.androidx.lifecycle.livedata.ktx)
+    implementation (libs.androidx.activity.ktx)
+    implementation (libs.androidx.fragment.ktx)
 
     // Navigation Component
-    implementation ("androidx.navigation:navigation-fragment-ktx:2.9.0")
-    implementation ("androidx.navigation:navigation-ui-ktx:2.7.7")
+    implementation (libs.androidx.navigation.fragment.ktx)
+    implementation (libs.androidx.navigation.ui.ktx)
 
     // Hilt for dependency injection
-    implementation ("com.google.dagger:hilt-android:2.56.2")
-    kapt ("com.google.dagger:hilt-android-compiler:2.56.2")
+    implementation (libs.hilt.android)
+    kapt (libs.hilt.android.compiler)
 
     // Retrofit for network requests
-    implementation ("com.squareup.retrofit2:retrofit:2.9.0")
-    implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
-    implementation ("com.squareup.okhttp3:logging-interceptor:4.11.0")
-    implementation ("com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.11")
+    implementation (libs.retrofit)
+    implementation (libs.converter.gson)
+    implementation (libs.logging.interceptor)
+    implementation (libs.logging.interceptor.v500alpha11)
 
     // Coroutines for asynchronous programming
-    implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
+    implementation (libs.kotlinx.coroutines.android)
 
     // Testing dependencies
-    testImplementation ("junit:junit:4.13.2")
-    testImplementation ("org.mockito:mockito-core:5.10.0")
-    testImplementation ("org.mockito.kotlin:mockito-kotlin:3.2.0")
-    testImplementation ("org.mockito:mockito-inline:5.2.0")
+    testImplementation (libs.junit)
+    testImplementation (libs.mockito.core)
+    testImplementation (libs.mockito.kotlin)
+    testImplementation (libs.mockito.inline)
 
-    testImplementation ("androidx.arch.core:core-testing:2.2.0")
-    testImplementation ("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.7.3")
+    testImplementation (libs.androidx.core.testing)
+    testImplementation (libs.kotlinx.coroutines.test)
 
 //    Firebase
-    implementation(platform("com.google.firebase:firebase-bom:33.13.0"))
-    implementation("com.google.firebase:firebase-analytics")
+    implementation(platform(libs.firebase.bom))
+    implementation(libs.firebase.analytics)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

@@ -1,4 +1,4 @@
-package com.eshaan.historicalapp
+package com.eshaan.historicalapp.ui.login
 
 import android.content.Intent
 import android.os.Bundle
@@ -7,6 +7,7 @@ import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import com.eshaan.historicalapp.databinding.ActivityLoginBinding
+import com.eshaan.historicalapp.ui.dashboard.DashboardActivity
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -53,12 +54,11 @@ class LoginActivity : AppCompatActivity() {
 
         viewModel.keypass.observe(this) { keypass ->
             if (keypass.isNotEmpty()) {
-                // Navigate to Dashboard with the keypass
                 val intent = Intent(this, DashboardActivity::class.java).apply {
-                    putExtra(DashboardActivity.EXTRA_KEYPASS, keypass)
+                    putExtra(DashboardActivity.Companion.EXTRA_KEYPASS, keypass)
                 }
                 startActivity(intent)
-                finish() // Optional: close the login activity
+                finish()
             }
         }
     }

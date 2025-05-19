@@ -1,6 +1,8 @@
 package com.eshaan.historicalapp
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
+import com.eshaan.historicalapp.data.repository.EventRepository
+import com.eshaan.historicalapp.ui.login.LoginViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.test.StandardTestDispatcher
@@ -31,7 +33,6 @@ class LoginViewModelTest {
 
     @Before fun setup() {
         Dispatchers.setMain(testDispatcher)
-        // Create mock with Kotlin DSL
         repository = mock()
         viewModel = LoginViewModel(repository)
     }

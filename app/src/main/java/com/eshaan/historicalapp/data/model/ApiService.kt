@@ -1,8 +1,5 @@
-package com.eshaan.historicalapp
+package com.eshaan.historicalapp.data.model
 
-import com.eshaan.historicalapp.data.model.DashboardResponse
-import com.eshaan.historicalapp.data.model.LoginRequest
-import com.eshaan.historicalapp.data.model.LoginResponse
 import retrofit2.Response
 import retrofit2.http.Body
 import retrofit2.http.GET

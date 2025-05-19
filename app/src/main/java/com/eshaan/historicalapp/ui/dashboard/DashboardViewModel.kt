@@ -1,11 +1,11 @@
-package com.eshaan.historicalapp
+package com.eshaan.historicalapp.ui.dashboard
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.eshaan.historicalapp.data.model.HistoricalEvent
-
+import com.eshaan.historicalapp.data.repository.EventRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject

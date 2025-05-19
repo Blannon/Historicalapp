@@ -1,4 +1,4 @@
-package com.eshaan.historicalapp
+package com.eshaan.historicalapp.ui.dashboard
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -48,8 +48,6 @@ class DetailsActivity : AppCompatActivity() {
             tvLocation.text = location
             tvKeyFigure.text = keyFigure
             tvDescription.text = description
-
-            // Set the toolbar title to the event name
             toolbar.title = event
         }
     }
